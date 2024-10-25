@@ -26,10 +26,14 @@ SECRET_KEY = 'django-insecure-8_^*cd=n6*^48pz-)4)v2@t2jiyk9i451$br7^ja%8z$m9+w93
 DEBUG = True
 
 ALLOWED_HOSTS = []
+<<<<<<< HEAD
 #Affichage des images&fichiers
 import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+=======
+
+>>>>>>> 61cdb3fe31232fa5ce08776b4aa46d177974e92e
 
 # Application definition
 
@@ -60,7 +64,11 @@ ROOT_URLCONF = 'djangoProjet2024.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [BASE_DIR / 'djangoProjet2024/Templates'], # specifier l'emplacement mt3 tempaltes bch yhezhom
+=======
+        'DIRS': [],
+>>>>>>> 61cdb3fe31232fa5ce08776b4aa46d177974e92e
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,4 +136,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< HEAD
 AUTH_USER_MODEL='Participant.Participant'  #definir l user
+=======
+AUTH_USER_MODEL='Participant.Participant'
+>>>>>>> 61cdb3fe31232fa5ce08776b4aa46d177974e92e

@@ -56,7 +56,11 @@ class ParticipantFilter(admin.SimpleListFilter): #La classe ParticipantFilter pe
 # Register your models here.
 class ConferenceAdmin(admin.ModelAdmin):
     #affichage des conferences
+<<<<<<< HEAD
     list_display = ('title', 'description', 'category', 'location','price','capacity','start_date', 'end_date','program') #Specifies which fields are shown in the list view of the admin interface ( wen search).
+=======
+    list_display = ('title', 'location', 'start_date', 'end_date', 'price') #Specifies which fields are shown in the list view of the admin interface ( wen search).
+>>>>>>> 61cdb3fe31232fa5ce08776b4aa46d177974e92e
     search_fields = ('title',)  # recherche selon titre #Un filtre selon le titre de la conférence. 
     list_per_page = 2 #Limits the number of conferences shown per page to 2. #Activez la pagination sur le tableau de la liste des conférences. 
     ordering = ('start_date', 'title') #Orders the conferences by start date and title.
@@ -64,7 +68,11 @@ class ConferenceAdmin(admin.ModelAdmin):
     list_filter = (ParticipantFilter,ConferenceDateFilter,)
     inlines = [ReservationInLine] #Afficher les entrées des réservations dans le formulaire d’ajout d’une conférence
     #fieldsets te permet de structurer les formulaires dans l'interface d'administration de manière plus lisible et intuitive. 
+<<<<<<< HEAD
     #list_editable=['title']
+=======
+     
+>>>>>>> 61cdb3fe31232fa5ce08776b4aa46d177974e92e
     fieldsets = (
         ('Description', {
             'fields': ('title', 'description', 'category', 'location','price','capacity')  # Correction des parenthèses

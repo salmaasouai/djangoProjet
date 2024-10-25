@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render #pour afficher un template en passant un dictionnaire
@@ -57,3 +58,8 @@ class ConferenceDeleteView(DeleteView):
     model = conference
     template_name = 'conferences/deleteCon.html'
     success_url = reverse_lazy('listeViewconf')
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> 61cdb3fe31232fa5ce08776b4aa46d177974e92e
