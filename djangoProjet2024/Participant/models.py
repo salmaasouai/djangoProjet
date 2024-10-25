@@ -30,7 +30,8 @@ class Participant(AbstractUser):
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
     class meta:
-        verbose_name_plural="participants" # pour changer le nom
+        verbose_name_plural="users" # pour changer le nom
+        verbose_name="participant"
 
 
 class Reservation(models.Model):

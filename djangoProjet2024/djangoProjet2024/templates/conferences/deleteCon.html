@@ -1,0 +1,10 @@
+
+<DOCTYPE html>
+<html lang="fr">
+<head>
+<h1>Delete {{ object.name }}?</h1>​
+    <form method="post">​
+     {% csrf_token %}​
+     <button type="submit">Confirm</button>​
+    </form>​
+    <a href="{% url 'listeViewconf' %}">Cancel</a>

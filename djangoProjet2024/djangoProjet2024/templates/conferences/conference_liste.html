@@ -1,0 +1,15 @@
+<h1>Liste des conférences</h1>
+{% for c in conferences %}
+<fieldset>
+    <legend>{{c.title}}</legend>
+    <p>Description: {{c.description}}</p>
+    <p>Start date: {{c.start_date}}</p>
+    <a href="{% url 'detailConf' c.id %}" >Details</a>
+    <!--qui tenzel 3la details yhezk ll lien conferences/details/num name mt3ha fl urls.py heya detailConf-->
+    <a href="{% url 'update_conference' c.pk %}">Modifier</a>
+    <a href="{% url 'delete_conference' c.pk %}">Delete</a>
+
+</fieldset>
+{% empty %}
+<p>la liste des conférences est vide</p>
+{% endfor %}

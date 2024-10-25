@@ -7,7 +7,7 @@ from django.utils import timezone
 class conference(models.Model):
     title=models.CharField(max_length=255)
     description=models.TextField()
-    start_date=models.DateField(default=timezone.now())
+    start_date = models.DateField(default=timezone.now)  # Utilisez timezone.now pour obtenir la date actuelle
     end_date=models.DateField()
     location=models.CharField(max_length=255)
     price=models.FloatField()
