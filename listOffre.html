@@ -1,0 +1,1412 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="zxx">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Gym Template">
+        <meta name="keywords" content="Gym, unica, creative, html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Gym | Template</title>
+    
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+        <!-- Css Styles -->
+
+
+
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/barfiller.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    
+
+    <style>
+        .star-rating {
+            display: inline-block;
+            direction: rtl;
+            font-size: 30px;
+            unicode-bidi: bidi-override;
+            cursor: pointer;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            color: lightgray;
+            padding: 0 5px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .star-rating input:checked ~ label {
+            color: gold;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: gold;
+        }
+
+        .star-rating label {
+            margin-right: 3px;
+        }
+
+        /* Pagination styles */
+.pagination .page-item .page-link {
+    color: #ff6f61; /* Couleur orange */
+    background-color: #1a1a1a; /* Fond noir */
+    border: 1px solid #ff6f61; /* Bordure orange */
+    padding: 10px 15px;
+    margin: 0 3px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #ff6f61; /* Fond orange survolé */
+    color: #1a1a1a; /* Texte noir */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ff6f61; /* Fond orange */
+    color: white; /* Texte blanc */
+    border: 1px solid #ff6f61; /* Bordure orange */
+    pointer-events: none; /* Désactiver le clic */
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #1a1a1a; /* Fond noir */
+    color: gray; /* Texte gris pour pages désactivées */
+    border: 1px solid #333; /* Bordure grise */
+}
+
+    </style>
+
+    <style>
+        /* Card Container */
+        .class-item {
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .class-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(243, 97, 0, 0.2);
+            border-color: rgba(243, 97, 0, 0.3);
+        }
+        
+        /* Header Section */
+        .offer-header {
+            position: relative;
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .offer-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #f36100, #ff8142);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(243, 97, 0, 0.2);
+        }
+        
+        .offer-icon i {
+            font-size: 35px;
+            color: #ffffff;
+        }
+        
+        .offer-header h3 {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        /* Price Section */
+        .pi-price {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .pi-price h2 {
+            color: #f36100;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .pi-price .period {
+            color: #888;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        /* Features List */
+        .class-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        
+        .class-item ul li {
+            color: #ffffff;
+            font-size: 15px;
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .class-item ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .class-item ul li strong {
+            color: #f36100;
+            margin-right: 10px;
+        }
+        
+        /* Action Buttons */
+        .primary-btn.pricing-btn {
+            width: 100%;
+            padding: 15px;
+            margin: 8px 0;
+            background: linear-gradient(135deg, #f36100, #ff8142);
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .primary-btn.pricing-btn:hover {
+            background: linear-gradient(135deg, #ff8142, #f36100);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243, 97, 0, 0.3);
+        }
+        
+        /* Rating Section */
+        .class-item h4 {
+            color: #ffffff;
+            font-size: 18px;
+            text-align: center;
+            margin: 30px 0 15px;
+        }
+        
+        .star-rating {
+            background: rgba(243, 97, 0, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px 0;
+        }
+        
+        .star-rating label {
+            font-size: 25px;
+            color: #4a4a4a;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: #f36100;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .class-item {
+                padding: 30px 20px;
+            }
+            
+            .pi-price h2 {
+                font-size: 36px;
+            }
+            
+            .offer-icon {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .offer-icon i {
+                font-size: 30px;
+            }
+        }
+        /* Section Analyse Faciale */
+        /* Section Analyse Faciale */
+        .analyze-section {
+            background: linear-gradient(135deg, #222222, #FF5733); /* Dégradé entre noir et orange */
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4); /* Ombre autour de la section */
+        }
+        
+        .analyze-section h2 {
+            font-size: 42px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            text-transform: uppercase; /* Texte en majuscules */
+            letter-spacing: 2px;
+        }
+        
+        .analyze-section p {
+            font-size: 20px;
+            color: #f1f1f1; /* Gris clair pour un bon contraste avec le fond sombre */
+            margin-bottom: 40px;
+        }
+        
+        /* Supprimer l'influence de Bootstrap */
+.btn-analyze {
+    background-color: #FF5733 !important; /* Orange vif, avec la priorité pour surcharger Bootstrap */
+    color: white !important;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* On surcharge également les autres états du bouton */
+.btn-analyze:hover {
+    background-color: #C13F1F !important;
+    color: #FF5733 !important;
+    border-color: #FF5733 !important;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-analyze:active {
+    background-color: #C13F1F !important;
+    transform: translateY(4px);
+}
+
+        
+        @media (max-width: 768px) {
+            .analyze-section {
+                padding: 60px 20px;
+            }
+        
+            .analyze-section h2 {
+                font-size: 36px;
+            }
+        
+            .analyze-section p {
+                font-size: 18px;
+            }
+        
+            .btn-analyze {
+                font-size: 16px;
+                padding: 15px 30px;
+                background-color: #C13F1F;
+            }
+        }
+        
+        
+
+        </style>  
+
+</head>
+<body>
+  
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="./class-details.html">Classes</a></li>
+                <li><a href="./listOffre.html">offers</a></li>
+                <li><a href="./team.html">Our Team</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="./about-us.html">About us</a></li>
+                        <li><a href="./class-timetable.html">Classes timetable</a></li>
+                        <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
+                        <li><a href="./team.html">Our team</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./blog.html">Our blog</a></li>
+                        <li><a href="./404.html">404</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="{% static 'img/logo.png' %}" alt="">
+
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About Us</a></li>
+                            <li><a href="./classes.html">Classes</a></li>
+                            <li class="active"><a href="./services.html">offers</a></li>
+                            <li><a href="./team.html">Our Team</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about-us.html">About us</a></li>
+                                    <li><a href="./class-timetable.html">Classes timetable</a></li>
+                                    <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
+                                    <li><a href="./team.html">Our team</a></li>
+                                    <li><a href="./gallery.html">Gallery</a></li>
+                                    <li><a href="./blog.html">Our blog</a></li>
+                                    <li><a href="./404.html">404</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="to-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static 'img/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>offers</h2>
+                        <div class="bt-option">
+                            <a href="./index.html">Home</a>
+                            <span>offers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Services Section Begin -->
+    <section class="services-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>What we do?</span>
+                        <h2>PUSH YOUR LIMITS FORWARD</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 order-lg-1 col-md-6 p-0">
+                    <div class="ss-pic">
+                        <img src="{% static 'img/services/services-1.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-2 col-md-6 p-0">
+                    <div class="ss-text">
+                        <h4>Personal training</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut dolore
+                            facilisis.</p>
+                        <a href="#">Explore</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-3 col-md-6 p-0">
+                    <div class="ss-pic">
+                        <img src="{% static 'img/services/services-2.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-4 col-md-6 p-0">
+                    <div class="ss-text">
+                        <h4>Group fitness classes</h4>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.</p>
+                        <a href="#">Explore</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-8 col-md-6 p-0">
+                    <div class="ss-pic">
+                        <img src="{% static 'img/services/services-4.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-7 col-md-6 p-0">
+                    <div class="ss-text second-row">
+                        <h4>Body building</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut dolore
+                            facilisis.</p>
+                        <a href="#">Explore</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-6 col-md-6 p-0">
+                    <div class="ss-pic">
+                        <img src="{% static 'img/services/services-3.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-5 col-md-6 p-0">
+                    <div class="ss-text second-row">
+                        <h4>Strength training</h4>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.</p>
+                        <a href="#">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+<!-- ========================= 
+
+    OFFERS SECTION   
+============================== -->
+<section id="price" class="pricing-section service-pricing spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Nos Offres</span>
+                    <h2>Choisissez l'offre qui vous convient</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton "Voir les Statistiques" -->
+        <div class="text-center my-4">
+            <a href="{% url 'offre_statistics_view' %}" class="btn btn-statistics">
+                Voir les statistiques des offres
+            </a>
+        </div>
+        
+
+        <!-- Section de recherche et tri -->
+        <div class="search-sort-container wow fadeInUp" data-wow-delay="0.3s">
+            <form method="get" action="{% url 'search_offres' %}" class="search-sort-form">
+                <div class="input-group input-group-lg">
+                    <input type="text" name="q" placeholder="Rechercher une offre..." 
+                           value="{{ request.GET.q|default_if_none:'' }}" class="form-control" />
+                    <button type="submit" class="btn btn-search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <select name="sort_by" id="sort_by" class="custom-select" onchange="this.form.submit()">
+                        <option value="price" {% if request.GET.sort_by == 'price' %}selected{% endif %}>Prix</option>
+                        <option value="start_date" {% if request.GET.sort_by == 'start_date' %}selected{% endif %}>Date de début</option>
+                        <option value="titleOffre" {% if request.GET.sort_by == 'titleOffre' %}selected{% endif %}>Titre</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <!--<form method="post" action="{% url 'analyze_face'  %}" enctype="multipart/form-data"> -->
+            
+        <section id="analyze" class="analyze-section spad">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Analyse Faciale</h2>
+                    <p>Envoyez une image pour découvrir les offres adaptées à votre âge.</p>
+                    <!-- Bouton redirigeant vers la page d'analyse -->
+                    <a href="{% url 'analyze_face' %}" class="btn btn-primary">Analyser mon visage</a>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Grid des offres -->
+        <div class="row justify-content-center">
+            {% for c in offres %}
+            <div class="col-lg-4 col-md-6">
+                <div class="class-item">
+                    <div class="ci-pic">
+                        <div class="offer-header">
+                            <div class="offer-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <h3><i class="fas fa-tag me-2"></i>{{ c.titleOffre }}</h3>
+                            <div class="pi-price">
+                                <h2><i class="fas fa-coins me-2"></i>{{ c.price }} DT</h2>
+                                <span class="period">Par mois</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Date de début:</strong> {{ c.start_date }}</li>
+                        <li>Accès illimité</li>
+                        <li>Support personnalisé</li>
+                        <li>Accès exclusif aux ressources</li>
+                    </ul>
+                    <a href="{% url 'detailoffre' c.id %}" class="primary-btn pricing-btn">Voir Détails</a>
+                    <a href="#" 
+                       class="primary-btn pricing-btn btn-abonner" 
+                       data-offre-id="{{ c.id }}">
+                       Participate
+                    </a>
+
+                    <!-- Fonction Écouter l'offre -->
+                    <button class="primary-btn pricing-btn" onclick="playAudio('{{ c.id }}')">Écouter l'offre</button>
+                    <audio id="audio-{{ c.id }}" style="display:none;" controls>
+                        <source src="{% url 'lire_offre_vocale' c.id %}" type="audio/mp3">
+                        Votre navigateur ne supporte pas la lecture de fichiers audio.
+                    </audio>
+
+                    <!-- JavaScript pour lecture audio -->
+                    <script>
+                        function playAudio(offreId) {
+                            const allAudioElements = document.querySelectorAll('audio');
+                            allAudioElements.forEach(audio => {
+                                audio.style.display = 'none';
+                                audio.pause();
+                            });
+
+                            const audioElement = document.getElementById('audio-' + offreId);
+                            if (audioElement) {
+                                audioElement.style.display = 'block';
+                                audioElement.play();
+                            } else {
+                                console.error(`Audio element not found for offer ID: ${offreId}`);
+                            }
+                        }
+                    </script>
+
+                    <!-- Système de notation -->
+                    <h4 class="mt-4">Notez cette offre</h4>
+                    <form method="post" action="{% url 'rate_offre' offre_id=c.id %}">
+                        {% csrf_token %}
+                        <div class="star-rating">
+                            <input type="radio" id="star5-{{ c.id }}" name="score" value="5" />
+                            <label for="star5-{{ c.id }}" class="star">&#9733;</label>
+                            <input type="radio" id="star4-{{ c.id }}" name="score" value="4" />
+                            <label for="star4-{{ c.id }}" class="star">&#9733;</label>
+                            <input type="radio" id="star3-{{ c.id }}" name="score" value="3" />
+                            <label for="star3-{{ c.id }}" class="star">&#9733;</label>
+                            <input type="radio" id="star2-{{ c.id }}" name="score" value="2" />
+                            <label for="star2-{{ c.id }}" class="star">&#9733;</label>
+                            <input type="radio" id="star1-{{ c.id }}" name="score" value="1" />
+                            <label for="star1-{{ c.id }}" class="star">&#9733;</label>
+                        </div>
+                        <button type="submit" class="primary-btn pricing-btn mt-3">Envoyer la note</button>
+                    </form>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-md-12">
+                <p class="alert alert-warning">Aucune offre disponible</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<div class="row justify-content-center">
+    {% for c in offres %}
+    <!-- Votre code existant pour chaque offre -->
+    {% empty %}
+    <div class="col-md-12">
+        <p class="alert alert-warning">Aucune offre disponible</p>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container bg-gray-100 py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <nav aria-label="Page navigation" class="bg-gray-100">
+                <ul class="pagination justify-content-center bg-gray-100">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link bg-gray-100" 
+                               href="?page=1{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">
+                                Première
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link bg-gray-100" 
+                               href="?page={{ page_obj.previous_page_number }}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">
+                                Précédente
+                            </a>
+                        </li>
+                    {% endif %}
+
+                    <li class="page-item active">
+                        <span class="page-link bg-gray-100">
+                            Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                        </span>
+                    </li>
+
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link bg-gray-100" 
+                               href="?page={{ page_obj.next_page_number }}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">
+                                Suivante
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link bg-gray-100" 
+                               href="?page={{ page_obj.paginator.num_pages }}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">
+                                Dernière
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Script JS corrigé -->
+<script>
+    document.querySelectorAll('.star-rating').forEach(starContainer => {
+        const stars = starContainer.querySelectorAll('label');
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                const rating = parseInt(star.htmlFor.split('-')[0].replace('star', ''));
+                stars.forEach(sibling => {
+                    sibling.style.color = parseInt(sibling.htmlFor.split('-')[0].replace('star', '')) <= rating ? 'gold' : 'lightgray';
+                });
+            });
+
+            star.addEventListener('mouseout', () => {
+                stars.forEach(sibling => sibling.style.color = '');
+            });
+        });
+    });
+
+
+
+// Function to get a specific cookie value
+// Function to get a specific cookie value
+function getCookie(name) {
+    const value = document.cookie; // Get cookies
+    const parts = value.split('; '); // Split cookies by ';'
+    for (let i = 0; i < parts.length; i++) {
+        const part = parts[i].split('='); // Split each cookie into name and value
+        if (part[0] === name) { // If cookie name matches
+            return decodeURIComponent(part[1]); // Return decoded value
+        }
+    }
+    return null; // Return null if cookie is not found
+}
+const token = localStorage.getItem('auth_token');
+if (token) {
+    console.log('Token trouvé:', token);
+} else {
+    console.error('Token non trouvé');
+}
+
+
+
+
+// Get the 'user_info' cookie
+const userInfoCookie = getCookie('user_info');
+
+// Parse the JSON string to an object
+const userInfo = JSON.parse(userInfoCookie);
+
+
+// Vérifier si le cookie user_info existe et le parser
+let allUserInfo = {};
+if (userInfoCookie) {
+    const userInfo = JSON.parse(userInfoCookie);
+
+    // Stocker toutes les informations de l'utilisateur dans un objet
+    allUserInfo = {
+        id: userInfo.id,
+        lastLogin: userInfo.last_login,
+        isSuperuser: userInfo.is_superuser,
+        username: userInfo.username,
+        firstName: userInfo.first_name,
+        lastName: userInfo.last_name,
+        email: userInfo.email,
+        isStaff: userInfo.is_staff,
+        isActive: userInfo.is_active,
+        dateJoined: userInfo.date_joined,
+        isClient: userInfo.is_client,
+        isCoach: userInfo.is_coach,
+        isNutritionist: userInfo.is_nutritionist,
+        gender: userInfo.sexe,
+        age: userInfo.age,
+        weight: userInfo.weight,
+        height: userInfo.height,
+        goalWeight: userInfo.goal_weight,
+        activityLevel: userInfo.activity_level,
+        profilePicture: userInfo.profile_picture,
+        programFitness: userInfo.program_fitness,
+        programNutrition: userInfo.program_nutrition,
+        groups: userInfo.groups,
+        userPermissions: userInfo.user_permissions
+    };
+
+    // Log toutes les informations de l'utilisateur
+    console.log(allUserInfo);
+    console.log(allUserInfo.id);
+} else {
+    console.error('Aucune information utilisateur trouvée dans les cookies.');
+}
+
+// Fonction pour envoyer une demande d'abonnement
+function abonnerOffre(offreId) {
+    // Vérifier si l'id de l'utilisateur est disponible
+    if (!allUserInfo.id) {
+        console.error('user id non trouvé, veuillez vous connecter.');
+        return;
+    }
+
+    const userId = allUserInfo.id; // Récupérer l'id de l'utilisateur à partir de allUserInfo
+
+    fetch(`http://localhost:8000/sabonner/${offreId}/${userId}/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`, // Utiliser le token dans l'en-tête
+        },
+        body: JSON.stringify({})  // Si vous avez besoin d'envoyer des données supplémentaires
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erreur de requête: ' + response.statusText);
+        }
+        return response.json();  // Nous attendons une réponse JSON
+    })
+    .then(data => {
+        console.log('Abonnement réussi:', data);
+    })
+    .catch(error => {
+        console.error('Erreur lors de l\'abonnement:', error);
+    });
+}
+
+/*
+  function getCookie(name) {
+        // Add '=' to the end of the cookie name to ensure precise matching
+        const cookieName = name + '=';
+        
+        // Decode the cookie string, handling potential URI encoding
+        const decodedCookie = decodeURIComponent(document.cookie);
+        
+        // Split cookies into an array
+        const cookieArray = decodedCookie.split(';');
+        
+        // Iterate through all cookies
+        for (let i = 0; i < cookieArray.length; i++) {
+            let cookie = cookieArray[i];
+            
+            // Remove leading whitespace
+            while (cookie.charAt(0) === ' ') {
+                cookie = cookie.substring(1);
+            }
+            
+            // Check if this cookie starts with the name we're looking for
+            if (cookie.indexOf(cookieName) === 0) {
+                // Return the value of the cookie (everything after the name and '=')
+                return cookie.substring(cookieName.length, cookie.length);
+            }
+        }
+        
+        // Return null if the cookie is not found
+        return null;
+    }
+    
+    // Improved token retrieval
+    function getAuthToken() {
+        // Try different storage methods
+        const tokenFromLocalStorage = localStorage.getItem('auth_token');
+        const tokenFromCookie = getCookie('auth_token');
+    
+        // Prioritize token from localStorage, then from cookie
+        return tokenFromLocalStorage || tokenFromCookie || null;
+    }
+    
+    // Improved authentication function
+    function authenticateUser(username, password) {
+        return fetch('http://localhost:8000/api/token/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Authentication failed');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Store tokens securely
+            localStorage.setItem('auth_token', data.access);
+            localStorage.setItem('refresh_token', data.refresh);
+            
+            // Set cookie with additional security attributes
+            document.cookie = `auth_token=${data.access}; path=/; SameSite=Strict; Secure`;
+            
+            return data; // Return data for further processing if needed
+        })
+        .catch(error => {
+            console.error('Login error:', error);
+            throw error; // Re-throw to allow caller to handle
+        });
+    }
+    
+    // Token refresh mechanism
+    function refreshToken() {
+        const refreshToken = localStorage.getItem('refresh_token');
+        
+        if (!refreshToken) {
+            console.error('No refresh token available');
+            // Redirect to login or handle logout
+            return Promise.reject(new Error('No refresh token'));
+        }
+        
+        return fetch('http://localhost:8000/api/token/refresh/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                refresh: refreshToken
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Token refresh failed');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Update tokens
+            localStorage.setItem('auth_token', data.access);
+            
+            // Update cookie with new token
+            document.cookie = `auth_token=${data.access}; path=/; SameSite=Strict; Secure`;
+            
+            return data.access; // Return new access token
+        })
+        .catch(error => {
+            console.error('Token refresh failed', error);
+            // Clear tokens and redirect to login
+            localStorage.removeItem('auth_token');
+            localStorage.removeItem('refresh_token');
+            throw error;
+        });
+    }
+    
+    // Improved subscription function
+    function abonnerOffre(offreId, userId) {
+        const token = getAuthToken();
+        
+        if (!token) {
+            console.error('No authentication token found');
+            return Promise.reject(new Error('No token available'));
+        }
+    
+        return fetch(`http://localhost:8000/sabonner/${offreId}/${userId}/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({}) // Add any additional data if needed
+        })
+        .then(response => {
+            if (!response.ok) {
+                // If unauthorized, try to refresh token
+                if (response.status === 401) {
+                    return refreshToken()
+                        .then(newToken => {
+                            // Retry the request with new token
+                            return fetch(`http://localhost:8000/sabonner/${offreId}/${userId}/`, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': `Bearer ${newToken}`
+                                },
+                                body: JSON.stringify({})
+                            });
+                        });
+                }
+                throw new Error(`Subscription failed: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Subscription successful:', data);
+            return data;
+        })
+        .catch(error => {
+            console.error('Subscription error:', error);
+            throw error;
+        });
+    }
+    
+    // Example usage
+    function handleSubscription(offreId) {
+        const token = getAuthToken();
+        const userId = getUserIdFromStorage(); // You'll need to implement this
+    
+        if (!token) {
+            console.error('Please log in first');
+            // Redirect to login page or show login modal
+            return;
+        }
+    
+        abonnerOffre(offreId, userId)
+            .then(result => {
+                // Handle successful subscription
+                alert('Subscription successful!');
+            })
+            .catch(error => {
+                // Handle errors (e.g., show error message)
+                alert('Subscription failed: ' + error.message);
+            });
+    }
+*/
+
+</script>
+
+
+
+<!-- Styles CSS supplémentaires -->
+<style>
+    .btn-statistics {
+        background-color: #FF7F50; /* Orange corail */
+        color: #000; /* Noir */
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 2px solid #FF7F50;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-statistics:hover {
+        background-color: #000; /* Noir */
+        color: #FF7F50; /* Orange corail */
+        border-color: #FF7F50;
+    }
+    
+    /* Formulaire de recherche et tri */
+    .search-sort-container {
+        margin-top: 30px;
+        background-color: #000; /* Fond noir */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        color: #fff; /* Texte en blanc pour contraster avec le fond noir */
+    }
+    
+    .search-sort-form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .input-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .input-group .form-control {
+        flex-grow: 1;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: #333; /* Fond sombre pour le champ de recherche */
+        color: #fff; /* Texte en blanc */
+    }
+    
+    .input-group .btn-search {
+        background-color: #ff6f61; /* Bouton en orange */
+        color: white;
+        border-radius: 5px;
+        border: none;
+        padding: 12px 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .input-group .btn-search:hover {
+        background-color: #e64c3c; /* Bouton au survol en couleur plus foncée */
+    }
+    
+    .custom-select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: #333; /* Fond sombre pour le sélecteur */
+        color: #fff; /* Texte en blanc */
+        transition: border-color 0.3s;
+    }
+    
+    .custom-select:focus {
+        border-color: #ff6f61; /* Bordure orange lorsqu'il est sélectionné */
+        outline: none;
+    }
+    
+    /* Styles pour les écrans plus petits */
+    @media (max-width: 767px) {
+        .search-sort-container {
+            text-align: center;
+        }
+    
+        .input-group {
+            flex-direction: column; /* Empiler le champ de recherche et le bouton */
+            align-items: stretch;
+        }
+    
+        .input-group .form-control,
+        .input-group .btn-search {
+            margin-bottom: 10px; /* Espacement entre le champ et le bouton */
+        }
+    
+        .custom-select {
+            width: 100%;
+        }
+    }
+    
+    /* Animations pour améliorer l'apparence */
+    .search-sort-container .wow {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }+
+    
+    .star-rating {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .star-rating input {
+        display: none; /* Masquer les boutons radio */
+    }
+    
+    .star-rating label {
+        font-size: 30px; /* Taille des étoiles */
+        color: lightgray;
+        cursor: pointer;
+    }
+    
+    .star-rating input:checked ~ label {
+        color: gold; /* Couleur de l'étoile sélectionnée */
+    }
+    
+    .star-rating input:checked ~ label:hover,
+    .star-rating input:checked ~ label:hover ~ label {
+        color: gold; /* Surbrillance lors du survol après sélection */
+    }
+    
+    /* Bouton centré */
+    button[type="submit"] {
+        display: block;
+        margin: 20px auto 0;
+    }
+    .service-pricing.spad {
+        padding: 60px 0;
+        background-color: #000; /* Arrière-plan noir */
+        color: #fff; /* Couleur du texte blanche */
+    }
+
+    .section-title span {
+        font-size: 16px;
+        color: #ff6f61; /* Accentuation colorée */
+        font-weight: 600;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #fff; /* Titre en blanc */
+    }
+
+    .ps-item {
+        background: #1a1a1a; /* Fond gris foncé pour les cartes */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .ps-item h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .pi-price h2 {
+        font-size: 40px;
+        color: #ff6f61; /* Couleur orange pour le prix */
+        margin-bottom: 10px;
+    }
+
+    .pi-price span {
+        font-size: 14px;
+        color: #ddd; /* Texte secondaire en gris clair */
+    }
+
+    .ps-item ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .ps-item ul li {
+        font-size: 16px;
+        color: #ccc; /* Texte des fonctionnalités */
+        margin-bottom: 10px;
+    }
+
+    .primary-btn.pricing-btn {
+        display: inline-block;
+        padding: 10px 30px;
+        background: #ff6f61; /* Couleur des boutons */
+        color: #fff;
+        border-radius: 50px;
+        margin-top: 15px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+
+    .primary-btn.pricing-btn:hover {
+        background: #e64c3c; /* Bouton au survol */
+        color: #fff;
+    }
+</style>
+
+
+
+
+
+
+<!-- Get In Touch Section Begin -->
+<div class="gettouch-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="gt-text">
+                    <i class="fa fa-map-marker"></i>
+                    <p>333 Middle Winchendon Rd, Rindge,<br/> NH 03461</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gt-text">
+                    <i class="fa fa-mobile"></i>
+                    <ul>
+                        <li>125-711-811</li>
+                        <li>125-668-886</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="gt-text email">
+                    <i class="fa fa-envelope"></i>
+                    <p>Nutrimove.@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Get In Touch Section End -->
+<!-- =========================
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <img src="{% static 'img/logo.png' %}" alt="">
+
+
+                            
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore dolore magna aliqua endisse ultrices gravida lorem.</p>
+                        <div class="fa-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Useful links</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Classes</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">My account</a></li>
+                            <li><a href="#">Subscribe</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Tips & Guides</h4>
+                        <div class="fw-recent">
+                            <h6><a href="#">Physical fitness may help prevent depression, anxiety</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="#">Fitness: The best exercise to lose belly fat and tone up...</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+   &copy;<script>document.write(new Date().getFullYear());</script>  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Nutrimove</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.barfiller.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    
+
+
+
+</body>
+
+</html>
