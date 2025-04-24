@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\base.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:base.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\detailsOffres.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:detailsOffres.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\face_analyzer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:face_analyzer.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\listOffre.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:listOffre.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\offre_statistics.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:offre_statistics.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\search_offres.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:search_offres.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "base.html",
+              "DocumentMoniker": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\base.html",
+              "RelativeDocumentMoniker": "base.html",
+              "ToolTip": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\base.html",
+              "RelativeToolTip": "base.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-15T16:10:58.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "face_analyzer.html",
+              "DocumentMoniker": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\face_analyzer.html",
+              "RelativeDocumentMoniker": "face_analyzer.html",
+              "ToolTip": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\face_analyzer.html",
+              "RelativeToolTip": "face_analyzer.html",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-15T16:07:00.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "detailsOffres.html",
+              "DocumentMoniker": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\detailsOffres.html",
+              "RelativeDocumentMoniker": "detailsOffres.html",
+              "ToolTip": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\detailsOffres.html",
+              "RelativeToolTip": "detailsOffres.html",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAgwJgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-15T16:03:07.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "listOffre.html",
+              "DocumentMoniker": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\listOffre.html",
+              "RelativeDocumentMoniker": "listOffre.html",
+              "ToolTip": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\listOffre.html",
+              "RelativeToolTip": "listOffre.html",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAMgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-15T16:07:48.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "offre_statistics.html",
+              "DocumentMoniker": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\offre_statistics.html",
+              "RelativeDocumentMoniker": "offre_statistics.html",
+              "ToolTip": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\offre_statistics.html",
+              "RelativeToolTip": "offre_statistics.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-15T16:08:18.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "search_offres.html",
+              "DocumentMoniker": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\search_offres.html",
+              "RelativeDocumentMoniker": "search_offres.html",
+              "ToolTip": "C:\\Users\\Mon Pc\\Downloads\\Templates2\\Templates\\search_offres.html",
+              "RelativeToolTip": "search_offres.html",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAgwJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-15T16:09:14.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
